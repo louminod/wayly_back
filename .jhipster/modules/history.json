@@ -49,5 +49,15 @@
       "endOfLine" : "lf",
       "indentSize" : 2
     }
+  }, {
+    "module" : "jacoco-with-min-coverage-check",
+    "date" : "2024-11-24T10:59:56.833086Z",
+    "properties" : {
+      "packageName" : "com.wayly.back",
+      "projectName" : "Wayly Back",
+      "baseName" : "waylyback",
+      "endOfLine" : "lf",
+      "indentSize" : 2
+    }
   } ]
 }
