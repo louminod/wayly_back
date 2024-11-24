@@ -1,0 +1,13 @@
+{
+  "actions" : [ {
+    "module" : "init",
+    "date" : "2024-11-24T10:59:56.430245Z",
+    "properties" : {
+      "packageName" : "com.wayly.back",
+      "projectName" : "Wayly Back",
+      "baseName" : "waylyback",
+      "endOfLine" : "lf",
+      "indentSize" : 2
+    }
+  } ]
+}
