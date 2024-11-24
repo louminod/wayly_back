@@ -1,0 +1,8 @@
+logging:
+  level:
+    com:
+      wayly:
+        back: INFO
+spring:
+  application:
+    name: Waylyback

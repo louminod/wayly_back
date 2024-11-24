@@ -79,5 +79,16 @@
       "endOfLine" : "lf",
       "indentSize" : 2
     }
+  }, {
+    "module" : "spring-boot",
+    "date" : "2024-11-24T11:01:08.744660Z",
+    "properties" : {
+      "packageName" : "com.wayly.back",
+      "projectName" : "Wayly Back",
+      "baseName" : "waylyback",
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "springConfigurationFormat" : "yaml"
+    }
   } ]
 }
