@@ -9,5 +9,15 @@
       "endOfLine" : "lf",
       "indentSize" : 2
     }
+  }, {
+    "module" : "application-service-hexagonal-architecture-documentation",
+    "date" : "2024-11-24T10:59:56.606196Z",
+    "properties" : {
+      "packageName" : "com.wayly.back",
+      "projectName" : "Wayly Back",
+      "baseName" : "waylyback",
+      "endOfLine" : "lf",
+      "indentSize" : 2
+    }
   } ]
 }
