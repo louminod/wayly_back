@@ -1,154 +1,182 @@
 {
-  "actions" : [ {
-    "module" : "init",
-    "date" : "2024-11-24T10:59:56.430245Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2
+  "actions": [
+    {
+      "module": "init",
+      "date": "2024-11-24T10:59:56.430245Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2
+      }
+    },
+    {
+      "module": "application-service-hexagonal-architecture-documentation",
+      "date": "2024-11-24T10:59:56.606196Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2
+      }
+    },
+    {
+      "module": "maven-java",
+      "date": "2024-11-24T10:59:56.704403Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2
+      }
+    },
+    {
+      "module": "prettier",
+      "date": "2024-11-24T10:59:56.749493Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2
+      }
+    },
+    {
+      "module": "checkstyle",
+      "date": "2024-11-24T10:59:56.791785Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2
+      }
+    },
+    {
+      "module": "jacoco-with-min-coverage-check",
+      "date": "2024-11-24T10:59:56.833086Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2
+      }
+    },
+    {
+      "module": "java-base",
+      "date": "2024-11-24T10:59:56.906062Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2
+      }
+    },
+    {
+      "module": "maven-wrapper",
+      "date": "2024-11-24T10:59:56.974692Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2
+      }
+    },
+    {
+      "module": "spring-boot",
+      "date": "2024-11-24T11:01:08.744660Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2,
+        "springConfigurationFormat": "yaml"
+      }
+    },
+    {
+      "module": "spring-boot-mvc-empty",
+      "date": "2024-12-10T14:16:27.676581Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2,
+        "springConfigurationFormat": "yaml",
+        "serverPort": 8080
+      }
+    },
+    {
+      "module": "spring-boot-mvc-empty",
+      "date": "2024-12-10T14:16:53.008461Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2,
+        "springConfigurationFormat": "yaml",
+        "serverPort": 8080
+      }
+    },
+    {
+      "module": "init",
+      "date": "2024-12-10T14:16:57.232464Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2,
+        "springConfigurationFormat": "yaml",
+        "serverPort": 8080
+      }
+    },
+    {
+      "module": "application-service-hexagonal-architecture-documentation",
+      "date": "2024-12-10T14:16:57.815901Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2,
+        "springConfigurationFormat": "yaml",
+        "serverPort": 8080
+      }
+    },
+    {
+      "module": "maven-java",
+      "date": "2024-12-10T14:16:58.408390Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2,
+        "springConfigurationFormat": "yaml",
+        "serverPort": 8080
+      }
+    },
+    {
+      "module": "prettier",
+      "date": "2024-12-10T14:16:59.805227Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2,
+        "springConfigurationFormat": "yaml",
+        "serverPort": 8080
+      }
     }
-  }, {
-    "module" : "application-service-hexagonal-architecture-documentation",
-    "date" : "2024-11-24T10:59:56.606196Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2
-    }
-  }, {
-    "module" : "maven-java",
-    "date" : "2024-11-24T10:59:56.704403Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2
-    }
-  }, {
-    "module" : "prettier",
-    "date" : "2024-11-24T10:59:56.749493Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2
-    }
-  }, {
-    "module" : "checkstyle",
-    "date" : "2024-11-24T10:59:56.791785Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2
-    }
-  }, {
-    "module" : "jacoco-with-min-coverage-check",
-    "date" : "2024-11-24T10:59:56.833086Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2
-    }
-  }, {
-    "module" : "java-base",
-    "date" : "2024-11-24T10:59:56.906062Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2
-    }
-  }, {
-    "module" : "maven-wrapper",
-    "date" : "2024-11-24T10:59:56.974692Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2
-    }
-  }, {
-    "module" : "spring-boot",
-    "date" : "2024-11-24T11:01:08.744660Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2,
-      "springConfigurationFormat" : "yaml"
-    }
-  }, {
-    "module" : "spring-boot-mvc-empty",
-    "date" : "2024-12-10T14:16:27.676581Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2,
-      "springConfigurationFormat" : "yaml",
-      "serverPort" : 8080
-    }
-  }, {
-    "module" : "spring-boot-mvc-empty",
-    "date" : "2024-12-10T14:16:53.008461Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2,
-      "springConfigurationFormat" : "yaml",
-      "serverPort" : 8080
-    }
-  }, {
-    "module" : "init",
-    "date" : "2024-12-10T14:16:57.232464Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2,
-      "springConfigurationFormat" : "yaml",
-      "serverPort" : 8080
-    }
-  }, {
-    "module" : "application-service-hexagonal-architecture-documentation",
-    "date" : "2024-12-10T14:16:57.815901Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2,
-      "springConfigurationFormat" : "yaml",
-      "serverPort" : 8080
-    }
-  }, {
-    "module" : "maven-java",
-    "date" : "2024-12-10T14:16:58.408390Z",
-    "properties" : {
-      "packageName" : "com.wayly.back",
-      "projectName" : "Wayly Back",
-      "baseName" : "waylyback",
-      "endOfLine" : "lf",
-      "indentSize" : 2,
-      "springConfigurationFormat" : "yaml",
-      "serverPort" : 8080
-    }
-  } ]
+  ]
 }
