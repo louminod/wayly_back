@@ -90,5 +90,41 @@
       "indentSize" : 2,
       "springConfigurationFormat" : "yaml"
     }
+  }, {
+    "module" : "spring-boot-mvc-empty",
+    "date" : "2024-12-10T14:16:27.676581Z",
+    "properties" : {
+      "packageName" : "com.wayly.back",
+      "projectName" : "Wayly Back",
+      "baseName" : "waylyback",
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "springConfigurationFormat" : "yaml",
+      "serverPort" : 8080
+    }
+  }, {
+    "module" : "spring-boot-mvc-empty",
+    "date" : "2024-12-10T14:16:53.008461Z",
+    "properties" : {
+      "packageName" : "com.wayly.back",
+      "projectName" : "Wayly Back",
+      "baseName" : "waylyback",
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "springConfigurationFormat" : "yaml",
+      "serverPort" : 8080
+    }
+  }, {
+    "module" : "init",
+    "date" : "2024-12-10T14:16:57.232464Z",
+    "properties" : {
+      "packageName" : "com.wayly.back",
+      "projectName" : "Wayly Back",
+      "baseName" : "waylyback",
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "springConfigurationFormat" : "yaml",
+      "serverPort" : 8080
+    }
   } ]
 }
