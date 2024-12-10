@@ -281,6 +281,19 @@
         "springConfigurationFormat": "yaml",
         "serverPort": 8080
       }
+    },
+    {
+      "module": "spring-boot-cucumber-mvc",
+      "date": "2024-12-10T14:17:10.529485Z",
+      "properties": {
+        "packageName": "com.wayly.back",
+        "projectName": "Wayly Back",
+        "baseName": "waylyback",
+        "endOfLine": "lf",
+        "indentSize": 2,
+        "springConfigurationFormat": "yaml",
+        "serverPort": 8080
+      }
     }
   ]
 }
