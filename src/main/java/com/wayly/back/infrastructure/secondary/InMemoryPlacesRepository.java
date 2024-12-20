@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -24,10 +23,10 @@ public class InMemoryPlacesRepository implements PlacesRepository {
   }
 
   @Override
-  public void save(Place place) {
-    Assert.notNull("place", place);
+  public void save(Places places) {
+    Assert.notNull("places", places);
 
-    places.put(place.id(), place);
+    places.values().forEach(place -> this.places.put(place.id(), place));
   }
 
   @Override

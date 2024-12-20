@@ -1,9 +1,9 @@
 package com.wayly.back.domain;
 
 import com.wayly.back.shared.error.domain.Assert;
-import java.util.List;
+import java.util.Collection;
 
-public record Themes(List<String> values) {
+public record Themes(Collection<String> values) {
   public Themes {
     Assert.notNull("values", values);
   }

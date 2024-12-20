@@ -1,6 +1,7 @@
 package com.wayly.back.application;
 
 import com.wayly.back.domain.*;
+import java.util.Collection;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +16,8 @@ public class PlacesApplicationService {
     this.places = places;
   }
 
-  public Place create(PlaceToCreate placeToCreate) {
-    return placesCreator.create(placeToCreate);
+  public Places create(Collection<PlaceToCreate> placesToCreate) {
+    return placesCreator.create(placesToCreate);
   }
 
   public Optional<Place> get(PlaceId placeId) {

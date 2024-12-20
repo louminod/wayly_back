@@ -5,7 +5,7 @@ import java.util.Optional;
 public interface PlacesRepository {
   Optional<Places> getByThemes(Themes themes);
 
-  void save(Place place);
+  void save(Places places);
 
   Optional<Place> get(PlaceId placeId);
 }

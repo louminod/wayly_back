@@ -1,22 +1,23 @@
 package com.wayly.back.domain;
 
 import com.wayly.back.shared.error.domain.Assert;
+import java.util.Collection;
 
 public class PlacesCreator {
 
-  private final PlacesRepository places;
+  private final PlacesRepository repository;
 
   public PlacesCreator(PlacesRepository places) {
     Assert.notNull("places", places);
-    this.places = places;
+    this.repository = places;
   }
 
-  public Place create(PlaceToCreate placeToCreate) {
-    Assert.notNull("placeToCreate", placeToCreate);
+  public Places create(Collection<PlaceToCreate> placesToCreate) {
+    Assert.notNull("placesToCreate", placesToCreate);
 
-    Place place = placeToCreate.create();
-    places.save(place);
+    Places places = new Places(placesToCreate.stream().map(PlaceToCreate::create).toList());
+    repository.save(places);
 
-    return place;
+    return places;
   }
 }
