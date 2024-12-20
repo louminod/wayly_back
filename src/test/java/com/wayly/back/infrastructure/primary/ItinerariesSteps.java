@@ -3,8 +3,6 @@ package com.wayly.back.infrastructure.primary;
 import static com.wayly.back.cucumber.rest.CucumberRestAssertions.assertThatLastResponse;
 
 import com.wayly.back.cucumber.rest.CucumberRestTemplate;
-import com.wayly.back.cucumber.rest.CucumberRestTestContext;
-import io.cucumber.java.de.Wenn;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,7 +29,7 @@ public class ItinerariesSteps {
         "region": "{REGION}",
         "country": "{COUNTRY}",
         "zipCode": "{ZIP_CODE}",
-        "coordinate": {
+        "coordinates": {
           "latitude": {LATITUDE},
           "longitude": {LONGITUDE}
         }
