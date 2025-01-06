@@ -1,12 +1,13 @@
 package com.wayly.back.infrastructure.primary;
 
 import com.wayly.back.application.PlacesApplicationService;
-import com.wayly.back.domain.Places;
+import com.wayly.back.domain.Place;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.Collection;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,8 +26,8 @@ public class PlacesResource {
 
   @PostMapping
   @Operation(summary = "Create a place")
-  public ResponseEntity<Collection<RestPlace>> createPlace(@RequestBody RestPlacesToCreate placesToCreate) {
-    Places places = this.places.create(placesToCreate.toDomain());
-    return new ResponseEntity<>(places.values().stream().map(RestPlace::from).toList(), HttpStatus.CREATED);
+  public ResponseEntity<Collection<RestPlace>> createPlace(@Validated @RequestBody RestPlacesToCreate placesToCreate) {
+    Collection<Place> places = this.places.create(placesToCreate.toDomain());
+    return new ResponseEntity<>(places.stream().map(RestPlace::from).toList(), HttpStatus.CREATED);
   }
 }

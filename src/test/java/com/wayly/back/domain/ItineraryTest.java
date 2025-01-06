@@ -10,15 +10,15 @@ public class ItineraryTest {
 
   @Test
   void shouldHavePlacesNotNull() {
-    Itinerary itinerary = new Itinerary.Builder().places(PlacesFixture.placesWithDifferentThemes).build();
+    Itinerary itinerary = new Itinerary.Builder().places(PlacesFixture.placesWithDifferentThemes()).build();
 
     assertThat(itinerary.places()).isNotNull();
   }
 
   @Test
   void shouldHaveThemesContainingAllThemesFromPlaces() {
-    Itinerary itinerary = new Itinerary.Builder().places(PlacesFixture.placesWithSameThemes).build();
+    Itinerary itinerary = new Itinerary.Builder().places(PlacesFixture.placesWithSameThemes()).build();
 
-    assertThat(itinerary.themes().values()).containsAll(ThemesFixture.themes.values());
+    assertThat(itinerary.themes()).containsAll(ThemesFixture.themes());
   }
 }

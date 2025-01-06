@@ -1,11 +1,10 @@
 package com.wayly.back.domain;
 
+import java.util.Collection;
 import java.util.Optional;
 
 public interface PlacesRepository {
-  Optional<Places> getByThemes(Themes themes);
+  Optional<Collection<Place>> getByThemes(Collection<Theme> themes);
 
-  void save(Places places);
-
-  Optional<Place> get(PlaceId placeId);
+  void save(Collection<Place> places);
 }

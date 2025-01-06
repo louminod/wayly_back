@@ -2,6 +2,7 @@ package com.wayly.back.infrastructure.secondary;
 
 import com.wayly.back.domain.*;
 import com.wayly.back.shared.error.domain.Assert;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -14,25 +15,18 @@ public class InMemoryPlacesRepository implements PlacesRepository {
   private final Map<PlaceId, Place> places = new ConcurrentHashMap<>();
 
   @Override
-  public Optional<Places> getByThemes(Themes themes) {
+  public Optional<Collection<Place>> getByThemes(Collection<Theme> themes) {
     Assert.notNull("themes", themes);
 
-    List<Place> list = places.values().stream().filter(place -> place.themes().equals(themes)).toList();
+    List<Place> list = places.values().stream().filter(place -> place.themes().containsAll(themes)).toList();
 
-    return Optional.of(new Places(list));
+    return Optional.of(list);
   }
 
   @Override
-  public void save(Places places) {
+  public void save(Collection<Place> places) {
     Assert.notNull("places", places);
 
-    places.values().forEach(place -> this.places.put(place.id(), place));
-  }
-
-  @Override
-  public Optional<Place> get(PlaceId placeId) {
-    Assert.notNull("placeId", placeId);
-
-    return Optional.ofNullable(places.get(placeId));
+    places.forEach(place -> this.places.put(place.id(), place));
   }
 }

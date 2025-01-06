@@ -19,7 +19,7 @@ public class AddressTest {
     assertThat(address.region()).isEqualTo("My Region");
     assertThat(address.country()).isEqualTo("My Country");
     assertThat(address.zipCode()).isEqualTo("My Zip Code");
-    assertThat(address.coordinate()).isEqualTo(new Coordinates(1.0, 2.0));
+    assertThat(address.coordinates()).isEqualTo(new Coordinates(1.0, 2.0));
   }
 
   @Test
@@ -61,6 +61,6 @@ public class AddressTest {
   public void shouldThrowAnExceptionWhenInstantiatedWithANullCoordinate() {
     assertThatThrownBy(() -> new Address("My Street", "My City", "My Region", "My Country", "My Zip Code", null))
       .isInstanceOf(MissingMandatoryValueException.class)
-      .hasMessageContaining("coordinate");
+      .hasMessageContaining("coordinates");
   }
 }

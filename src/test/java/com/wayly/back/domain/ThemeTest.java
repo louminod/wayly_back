@@ -6,15 +6,15 @@ import com.wayly.back.UnitTest;
 import org.junit.jupiter.api.Test;
 
 @UnitTest
-public class ThemesTest {
+public class ThemeTest {
 
   @Test
   void shouldGetThemes() {
-    assertThat(ThemesFixture.themes).isEqualTo(ThemesFixture.themes);
+    assertThat(ThemesFixture.themes()).isEqualTo(ThemesFixture.themes());
   }
 
   @Test
   void shouldNotBeNull() {
-    assertThat(ThemesFixture.themes).isNotNull();
+    assertThat(ThemesFixture.themes()).isNotNull();
   }
 }

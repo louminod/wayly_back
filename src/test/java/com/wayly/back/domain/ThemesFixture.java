@@ -6,7 +6,7 @@ public class ThemesFixture {
 
   private ThemesFixture() {}
 
-  public static final List<String> themesValues = List.of("theme1", "theme2");
-
-  public static final Themes themes = new Themes(themesValues);
+  public static List<Theme> themes() {
+    return List.of(new Theme("theme1"), new Theme("theme2"));
+  }
 }

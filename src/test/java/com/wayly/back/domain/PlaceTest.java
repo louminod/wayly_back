@@ -12,13 +12,19 @@ public class PlaceTest {
 
   @Test
   public void shouldInstantiate() {
-    Place place = new Place(PlacesFixture.placeId, "My Place", "My Place Description", AddressesFixture.address(), ThemesFixture.themes);
+    Place place = new Place(
+      PlacesFixture.placeId(),
+      "My Place",
+      "My Place Description",
+      AddressesFixture.address(),
+      ThemesFixture.themes()
+    );
 
-    assertThat(place.id()).isEqualTo(PlacesFixture.placeId);
+    assertThat(place.id()).isEqualTo(PlacesFixture.placeId());
     assertThat(place.name()).isEqualTo("My Place");
     assertThat(place.description()).isEqualTo("My Place Description");
     assertThat(place.address()).isEqualTo(AddressesFixture.address());
-    assertThat(place.themes()).isEqualTo(ThemesFixture.themes);
+    assertThat(place.themes()).isEqualTo(ThemesFixture.themes());
   }
 
   @Test
@@ -29,7 +35,7 @@ public class PlaceTest {
         "My Place",
         "My Place Description",
         new Address("My Street", "My City", "My Region", "My Country", "My  ZipCode", new Coordinates(0.0, 0.0)),
-        ThemesFixture.themes
+        ThemesFixture.themes()
       )
     )
       .isInstanceOf(MissingMandatoryValueException.class)
@@ -40,11 +46,11 @@ public class PlaceTest {
   public void shouldThrowAnExceptionWhenInstantiatedWithANullName() {
     assertThatThrownBy(() ->
       new Place(
-        PlacesFixture.placeId,
+        PlacesFixture.placeId(),
         null,
         "My Place Description",
         new Address("My Street", "My City", "My Region", "My Country", "My  ZipCode", new Coordinates(0.0, 0.0)),
-        ThemesFixture.themes
+        ThemesFixture.themes()
       )
     )
       .isInstanceOf(MissingMandatoryValueException.class)
@@ -55,11 +61,11 @@ public class PlaceTest {
   public void shouldThrowAnExceptionWhenInstantiatedWithANullDescription() {
     assertThatThrownBy(() ->
       new Place(
-        PlacesFixture.placeId,
+        PlacesFixture.placeId(),
         "My Place",
         null,
         new Address("My Street", "My City", "My Region", "My Country", "My  ZipCode", new Coordinates(0.0, 0.0)),
-        ThemesFixture.themes
+        ThemesFixture.themes()
       )
     )
       .isInstanceOf(MissingMandatoryValueException.class)
@@ -68,7 +74,7 @@ public class PlaceTest {
 
   @Test
   public void shouldThrowAnExceptionWhenInstantiatedWithANullAddress() {
-    assertThatThrownBy(() -> new Place(PlacesFixture.placeId, "My Place", "My Place Description", null, ThemesFixture.themes))
+    assertThatThrownBy(() -> new Place(PlacesFixture.placeId(), "My Place", "My Place Description", null, ThemesFixture.themes()))
       .isInstanceOf(MissingMandatoryValueException.class)
       .hasMessageContaining("address");
   }
@@ -77,7 +83,7 @@ public class PlaceTest {
   public void shouldThrowAnExceptionWhenInstantiatedWithANullThemes() {
     assertThatThrownBy(() ->
       new Place(
-        PlacesFixture.placeId,
+        PlacesFixture.placeId(),
         "My Place",
         "My Place Description",
         new Address("My Street", "My City", "My Region", "My Country", "My  ZipCode", new Coordinates(0.0, 0.0)),

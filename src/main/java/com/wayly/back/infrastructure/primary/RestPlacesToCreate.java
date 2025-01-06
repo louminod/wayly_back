@@ -1,8 +1,8 @@
 package com.wayly.back.infrastructure.primary;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.wayly.back.domain.Place;
 import com.wayly.back.domain.PlaceToCreate;
-import com.wayly.back.domain.Places;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Collection;
 
@@ -16,13 +16,9 @@ public class RestPlacesToCreate {
   }
 
   public Collection<PlaceToCreate> toDomain() {
-    Places places = new Places(getPlaces().stream().map(RestPlace::toDomain).toList());
+    Collection<Place> places = getPlaces().stream().map(RestPlace::toDomain).toList();
 
-    return places
-      .values()
-      .stream()
-      .map(place -> new PlaceToCreate(place.name(), place.description(), place.address(), place.themes()))
-      .toList();
+    return places.stream().map(place -> new PlaceToCreate(place.name(), place.description(), place.address(), place.themes())).toList();
   }
 
   @Schema(description = "Places", requiredMode = Schema.RequiredMode.REQUIRED)

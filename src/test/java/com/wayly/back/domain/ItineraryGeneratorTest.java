@@ -24,18 +24,18 @@ public class ItineraryGeneratorTest {
 
   @Test
   void shouldGenerateItineraryBasedOnDefinedThemes() {
-    when(placesRepository.getByThemes(ThemesFixture.themes)).thenReturn(Optional.of(PlacesFixture.placesWithSameThemes));
+    when(placesRepository.getByThemes(ThemesFixture.themes())).thenReturn(Optional.of(PlacesFixture.placesWithSameThemes()));
 
-    Itinerary itinerary = itineraryGenerator.generate(ThemesFixture.themes);
+    Itinerary itinerary = itineraryGenerator.generate(ThemesFixture.themes());
 
-    assertThat(itinerary.places().values()).containsExactlyInAnyOrderElementsOf(PlacesFixture.placesWithSameThemes.values());
+    assertThat(itinerary.places()).containsExactlyInAnyOrderElementsOf(PlacesFixture.placesWithSameThemes());
   }
 
   @Test
   void shouldThrowAnExceptionWhenNoPlacesAreFoundForDefinedThemes() {
-    when(placesRepository.getByThemes(ThemesFixture.themes)).thenReturn(Optional.empty());
+    when(placesRepository.getByThemes(ThemesFixture.themes())).thenReturn(Optional.empty());
 
-    assertThatThrownBy(() -> itineraryGenerator.generate(ThemesFixture.themes))
+    assertThatThrownBy(() -> itineraryGenerator.generate(ThemesFixture.themes()))
       .isInstanceOf(NoPlacesFoundException.class)
       .hasMessageContaining("No places found for themes");
   }

@@ -12,10 +12,10 @@ public class PlacesCreator {
     this.repository = places;
   }
 
-  public Places create(Collection<PlaceToCreate> placesToCreate) {
+  public Collection<Place> create(Collection<PlaceToCreate> placesToCreate) {
     Assert.notNull("placesToCreate", placesToCreate);
 
-    Places places = new Places(placesToCreate.stream().map(PlaceToCreate::create).toList());
+    Collection<Place> places = placesToCreate.stream().map(PlaceToCreate::create).toList();
     repository.save(places);
 
     return places;

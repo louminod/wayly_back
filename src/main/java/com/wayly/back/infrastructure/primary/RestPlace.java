@@ -23,11 +23,36 @@ public class RestPlace {
   }
 
   Place toDomain() {
-    return new Place(PlaceId.newId(), name, description, address.toDomain(), new Themes(themes));
+    return new Place(PlaceId.newId(), name, description, address.toDomain(), themes.stream().map(Theme::new).toList());
   }
 
   public static RestPlace from(Place place) {
-    return new RestPlaceBuilder().name(place.name()).build();
+    return new RestPlaceBuilder()
+      .name(place.name())
+      .description(place.description())
+      .address(RestAddress.from(place.address()))
+      .themes(place.themes().stream().map(Theme::value).toList())
+      .build();
+  }
+
+  @Schema(description = "Name of this place", requiredMode = Schema.RequiredMode.REQUIRED)
+  public String getName() {
+    return name;
+  }
+
+  @Schema(description = "Description of this place", requiredMode = Schema.RequiredMode.REQUIRED)
+  public String getDescription() {
+    return description;
+  }
+
+  @Schema(description = "Themes of this place", requiredMode = Schema.RequiredMode.REQUIRED)
+  public Collection<String> getThemes() {
+    return themes;
+  }
+
+  @Schema(description = "Address of this place", requiredMode = Schema.RequiredMode.REQUIRED)
+  public RestAddress getAddress() {
+    return address;
   }
 
   @JsonPOJOBuilder(withPrefix = "")
