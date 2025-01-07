@@ -18,7 +18,7 @@ public class InMemoryPlacesRepository implements PlacesRepository {
   public Optional<Collection<Place>> getByThemes(Collection<Theme> themes) {
     Assert.notNull("themes", themes);
 
-    List<Place> list = places.values().stream().filter(place -> place.themes().containsAll(themes)).toList();
+    List<Place> list = places.values().stream().filter(place -> place.themes().containsAll(themes)).sorted().toList();
 
     return Optional.of(list);
   }
