@@ -7,4 +7,8 @@ public interface PlacesRepository {
   Optional<Collection<Place>> getByThemes(Collection<Theme> themes);
 
   void save(Collection<Place> places);
+
+  Optional<Place> getByName(String name);
+
+  void deleteAll();
 }

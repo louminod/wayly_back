@@ -29,4 +29,16 @@ public class InMemoryPlacesRepository implements PlacesRepository {
 
     places.forEach(place -> this.places.put(place.id(), place));
   }
+
+  @Override
+  public Optional<Place> getByName(String name) {
+    Assert.notNull("name", name);
+
+    return places.values().stream().filter(place -> place.name().equals(name)).findFirst();
+  }
+
+  @Override
+  public void deleteAll() {
+    places.clear();
+  }
 }

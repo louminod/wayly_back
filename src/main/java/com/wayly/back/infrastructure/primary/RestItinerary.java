@@ -8,7 +8,7 @@ import java.util.Collection;
 
 @JsonDeserialize(builder = RestItinerary.RestItineraryBuilder.class)
 @Schema(name = "Itinerary", description = "An itinerary")
-public class RestItinerary {
+public final class RestItinerary {
 
   private final Collection<RestPlace> places;
 

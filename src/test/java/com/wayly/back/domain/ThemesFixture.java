@@ -2,7 +2,7 @@ package com.wayly.back.domain;
 
 import java.util.List;
 
-public class ThemesFixture {
+public final class ThemesFixture {
 
   private ThemesFixture() {}
 

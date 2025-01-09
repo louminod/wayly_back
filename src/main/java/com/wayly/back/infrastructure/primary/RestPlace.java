@@ -8,7 +8,7 @@ import java.util.Collection;
 
 @JsonDeserialize(builder = RestPlace.RestPlaceBuilder.class)
 @Schema(name = "Place", description = "A Place")
-public class RestPlace {
+public final class RestPlace {
 
   private final String name;
   private final String description;

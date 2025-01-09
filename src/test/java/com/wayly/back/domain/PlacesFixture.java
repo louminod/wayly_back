@@ -3,7 +3,7 @@ package com.wayly.back.domain;
 import java.util.Collection;
 import java.util.List;
 
-public class PlacesFixture {
+public final class PlacesFixture {
 
   private static PlaceId placeId;
 

@@ -1,7 +1,6 @@
 package com.wayly.back.infrastructure.primary;
 
 import com.wayly.back.application.ItinerariesApplicationService;
-import com.wayly.back.domain.Itinerary;
 import com.wayly.back.domain.Theme;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

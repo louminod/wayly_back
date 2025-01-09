@@ -1,6 +1,6 @@
 package com.wayly.back.domain;
 
-public class AddressesFixture {
+public final class AddressesFixture {
 
   private AddressesFixture() {}
 
