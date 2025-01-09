@@ -38,7 +38,19 @@ public class InMemoryPlacesRepository implements PlacesRepository {
   }
 
   @Override
+  public Collection<Place> getByCity(String city) {
+    Assert.notNull("city", city);
+
+    return places.values().stream().filter(place -> place.address().city().equals(city)).sorted().toList();
+  }
+
+  @Override
   public void deleteAll() {
     places.clear();
+  }
+
+  @Override
+  public Collection<Place> getAll() {
+    return places.values().stream().sorted().toList();
   }
 }

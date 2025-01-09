@@ -31,14 +31,19 @@ public class PlacesResource {
 
   @GetMapping
   @Operation(summary = "Get places by name or themes")
-  public ResponseEntity<?> getPlaces(@RequestParam(required = false) String name, @RequestParam(required = false) List<String> themes) {
+  public ResponseEntity<?> getPlaces(
+    @RequestParam(required = false) String name,
+    @RequestParam(required = false) List<String> themes,
+    @RequestParam(required = false) String city
+  ) {
     if (name != null) {
-      return this.places.get(name).map(RestPlace::from).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+      return new ResponseEntity<>(this.places.get(name).map(RestPlace::from).orElse(null), HttpStatus.OK);
     } else if (themes != null && !themes.isEmpty()) {
-      Collection<Place> places = this.places.getByThemes(themes);
-      return new ResponseEntity<>(places.stream().map(RestPlace::from).toList(), HttpStatus.OK);
+      return new ResponseEntity<>(this.places.getByThemes(themes).stream().map(RestPlace::from).toList(), HttpStatus.OK);
+    } else if (city != null) {
+      return new ResponseEntity<>(this.places.getByCity(city).stream().map(RestPlace::from).toList(), HttpStatus.OK);
     } else {
-      return ResponseEntity.badRequest().build();
+      return new ResponseEntity<>(this.places.getAll().stream().map(RestPlace::from).toList(), HttpStatus.OK);
     }
   }
 }

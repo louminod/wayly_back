@@ -28,4 +28,12 @@ public class PlacesApplicationService {
   public Collection<Place> getByThemes(Collection<String> themes) {
     return places.getByThemes(themes.stream().map(Theme::new).toList()).orElse(List.of());
   }
+
+  public Collection<Place> getByCity(String city) {
+    return places.getByCity(city);
+  }
+
+  public Collection<Place> getAll() {
+    return places.getAll();
+  }
 }

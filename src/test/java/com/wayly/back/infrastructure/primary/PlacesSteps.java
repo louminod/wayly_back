@@ -45,6 +45,20 @@ public class PlacesSteps {
 
   @Then("I should have places")
   public void shouldHavePlaces(List<Map<String, String>> places) {
-    assertThatLastResponse().hasOkStatus().hasElement("$").containing(places);
+    assertThatLastResponse().hasOkStatus().hasElement("$").containingExactly(places);
+  }
+
+  @When("I get all places")
+  public void getAllPlaces() {
+    rest.get("/api/places");
+
+    assertThatLastResponse().hasOkStatus();
+  }
+
+  @When("I get places with city {string}")
+  public void iGetPlacesWithCity(String city) {
+    rest.get("/api/places?city=" + city);
+
+    assertThatLastResponse().hasOkStatus();
   }
 }
